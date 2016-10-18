@@ -1,7 +1,7 @@
-<html>
+ï»¿<html>
 <head>
-<title>Å]ªk¶Ë®`¸Õºâ 20161018 ª©</title>
-<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5" />
+<title>é­”æ³•å‚·å®³è©¦ç®— 20161018 ç‰ˆ</title>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
 <link rel="icon" href="XG_icon.png" type="image/ico"/>
 </head>
 <body bgcolor=dddddd>
@@ -43,9 +43,9 @@ function Dydron(){
 //	magic.jjj.value = adm_damage();
 //	magic.kkk.value = additional_damage();
 }
-function fundamental_damage(){ // ³æ±j¶Wªk¦U¯Å«Â¤O°ò¥»­È
+function fundamental_damage(){ // å–®å¼·è¶…æ³•å„ç´šå¨åŠ›åŸºæœ¬å€¼
 	switch (magic.type.value){
-	case "1":	// ³æªk
+	case "1":	// å–®æ³•
 		switch (magic.level.value){
 		case "1":	return 100;
 		case "2":	return 180;
@@ -66,7 +66,7 @@ function fundamental_damage(){ // ³æ±j¶Wªk¦U¯Å«Â¤O°ò¥»­È
 		case "14":	return 992;
 		case "15":	return 1066;
 		}
-	case "2":	// ±jªk
+	case "2":	// å¼·æ³•
 		switch (magic.level.value){
 		case "1":	return  59;
 		case "2":	return 109;
@@ -84,7 +84,7 @@ function fundamental_damage(){ // ³æ±j¶Wªk¦U¯Å«Â¤O°ò¥»­È
 		case "14":	return 656;
 		case "15":	return 704;
 		}
-	case "3":	// ¶Wªk
+	case "3":	// è¶…æ³•
 		switch (magic.level.value){
 		case "1":	return  40;
 		case "2":	return  71;
@@ -102,7 +102,7 @@ function fundamental_damage(){ // ³æ±j¶Wªk¦U¯Å«Â¤O°ò¥»­È
 		case "14":	return 440;
 		case "15":	return 475;
 		}
-	case "4":	// §l¦å
+	case "4":	// å¸è¡€
 		switch (magic.level.value){
 		case "1":	return  55;
 		case "2":	return 100;
@@ -129,7 +129,7 @@ function mnd_ratio(){
 	else if (magic.mnd_1.value <= 0) return 0;
 	else return mnd_ratio_real;
 }
-function crystal_relation(){	// ¤ô´¹Äİ©Ê
+function crystal_relation(){	// æ°´æ™¶å±¬æ€§
 	slot=0;
 	sum_1=(magic.ground_1.value*1 + magic.water_1.value*1 + magic.fire_1.value*1 + magic.wind_1.value*1) * 10;
 	sum_2=(magic.ground_2.value*1 + magic.water_2.value*1 + magic.fire_2.value*1 + magic.wind_2.value*1) * 10;
@@ -147,22 +147,22 @@ function crystal_relation(){	// ¤ô´¹Äİ©Ê
 	slot = slot_1*1 + slot_2*1 + slot_3*1 + slot_4*1 - slot_5*1 - slot_6*1 - slot_7*1 - slot_8*1 + sum_1*1 - sum_2*1;
 	return slot*0.003;
 }
-function element_relation(){	// ªk³NÄİ©Ê
+function element_relation(){	// æ³•è¡“å±¬æ€§
 	section=0;
 	switch (magic.element.value){
-	case "1": // ¦a
+	case "1": // åœ°
 		section = section + magic.water_2.value;
 		section = section - magic.wind_2.value;
 		break;
-	case "2": // ¤ô
+	case "2": // æ°´
 		section = section + magic.fire_2.value;
 		section = section - magic.ground_2.value;
 		break;
-	case "3": // ¤õ
+	case "3": // ç«
 		section = section + magic.wind_2.value;
 		section = section - magic.water_2.value;
 		break;
-	case "4": // ­·
+	case "4": // é¢¨
 		section = section + magic.ground_2.value;
 		section = section - magic.fire_2.value;
 		break;
@@ -174,7 +174,7 @@ function element_relation(){	// ªk³NÄİ©Ê
 */
 	return section*0.035;
 }
-function race_relation(){	// ºØ±Ú¬Û«g´`Àô
+function race_relation(){	// ç¨®æ—ç›¸å‰‹å¾ªç’°
 		switch (magic.race_2.value){
 			case "1":	return 0.2;
 			case "4":	return 0.1;
@@ -185,7 +185,7 @@ function race_relation(){	// ºØ±Ú¬Û«g´`Àô
 			default :	return 0;
 		}
 }
-function five_off_six_adv(input_value){ // ¤­±Ë¤»¤J
+function five_off_six_adv(input_value){ // äº”æ¨å…­å…¥
 	if (input_value-Math.floor(input_value)<= 0.5){
 		return Math.floor(input_value);
 	}
@@ -193,7 +193,7 @@ function five_off_six_adv(input_value){ // ¤­±Ë¤»¤J
 		return Math.round(input_value);
 	}
 }
-function adm_relation(){	// ¤Q¯ÅÅ]ªk¥H¤UÅ]§ğ¼vÅT
+function adm_relation(){	// åç´šé­”æ³•ä»¥ä¸‹é­”æ”»å½±éŸ¿
 	switch (magic.level.value){
 		case "1":
 			if (magic.adm.value <= 10)
@@ -268,67 +268,67 @@ function adm_relation(){	// ¤Q¯ÅÅ]ªk¥H¤UÅ]§ğ¼vÅT
 	}
 	return 1.5;
 }
-function adm_damage(){ // 11¯Åªk³N¥H¤WÅ]§ğ¼vÅT
+function adm_damage(){ // 11ç´šæ³•è¡“ä»¥ä¸Šé­”æ”»å½±éŸ¿
 	switch (magic.level.value){
 		case "11":
 			switch (magic.type.value){
-			case "1": // ³æªk
+			case "1": // å–®æ³•
 				return magic.adm.value * 1.1;
-			case "2": // ±jªk
+			case "2": // å¼·æ³•
 				return magic.adm.value * 0.9;
-			case "3": // ¶Wªk
+			case "3": // è¶…æ³•
 				return magic.adm.value * 0.7;
-			case "4": // §l¦å
+			case "4": // å¸è¡€
 				return magic.adm.value * 1.1;
 			}
 		case "12":
 			switch (magic.type.value){
-			case "1": // ³æªk
+			case "1": // å–®æ³•
 				return magic.adm.value * 1.2;
-			case "2": // ±jªk
+			case "2": // å¼·æ³•
 				return magic.adm.value * 1;
-			case "3": // ¶Wªk
+			case "3": // è¶…æ³•
 				return magic.adm.value * 0.8;
-			case "4": // §l¦å
+			case "4": // å¸è¡€
 				return magic.adm.value * 1.2;
 			}
 		case "13":
 			switch (magic.type.value){
-			case "1": // ³æªk
+			case "1": // å–®æ³•
 				return magic.adm.value * 1.3;
-			case "2": // ±jªk
+			case "2": // å¼·æ³•
 				return magic.adm.value * 1.1;
-			case "3": // ¶Wªk
+			case "3": // è¶…æ³•
 				return magic.adm.value * 0.9;
-			case "4": // §l¦å
+			case "4": // å¸è¡€
 				return magic.adm.value * 1.3;
 			}
 		case "14":
 			switch (magic.type.value){
-			case "1": // ³æªk
+			case "1": // å–®æ³•
 				return magic.adm.value * 1.5;
-			case "2": // ±jªk
+			case "2": // å¼·æ³•
 				return magic.adm.value * 1.3;
-			case "3": // ¶Wªk
+			case "3": // è¶…æ³•
 				return magic.adm.value * 1.1;
-			case "4": // §l¦å
+			case "4": // å¸è¡€
 				return magic.adm.value * 1.5;
 			}
 		case "15":
 			switch (magic.type.value){
-			case "1": // ³æªk
+			case "1": // å–®æ³•
 				return magic.adm.value * 1.7;
-			case "2": // ±jªk
+			case "2": // å¼·æ³•
 				return magic.adm.value * 1.5;
-			case "3": // ¶Wªk
+			case "3": // è¶…æ³•
 				return magic.adm.value * 1.3;
-			case "4": // §l¦å
+			case "4": // å¸è¡€
 				return magic.adm.value * 1.7;
 			}
 	}	
 	return 1;
 }
-function additional_damage() {	// 11¯Å¥H¤Wªk³NÃB¥~¶Ë®`¼W´T
+function additional_damage() {	// 11ç´šä»¥ä¸Šæ³•è¡“é¡å¤–å‚·å®³å¢å¹…
 	switch (magic.level.value){
 		case "11": return 310;
 		case "12": return 340;
@@ -338,20 +338,20 @@ function additional_damage() {	// 11¯Å¥H¤Wªk³NÃB¥~¶Ë®`¼W´T
 	}
 	return 0;
 }
-function mnd_difference(){	// ¬Iªk¤è»P¨üªk¤èºë¯«¤ñ¼vÅT
+function mnd_difference(){	// æ–½æ³•æ–¹èˆ‡å—æ³•æ–¹ç²¾ç¥æ¯”å½±éŸ¿
 //	ratio_1=magic.mnd_1.value / magic.mnd_2.value;
 //	ratio_2=magic.mnd_2.value / magic.mnd_1.value;
 	if (magic.mnd_1.value <= 0){
 		ratio_1=0;
 	} else if (magic.mnd_2.value <= 0) {
-		ratio_1=10000; // ÀH«K¤@­Ó¤ñ 1.2 ¤jªº­È
+		ratio_1=10000; // éš¨ä¾¿ä¸€å€‹æ¯” 1.2 å¤§çš„å€¼
 	} else {
 		ratio_1=magic.mnd_1.value / magic.mnd_2.value;
 	}
 	if (magic.mnd_2.value <= 0){
 		ratio_2=0;
 	} else if (magic.mnd_1.value <= 0){
-		ratio_2=10000; // ÀH«K¤@­Ó¤ñ 1.43 ¤jªº­È
+		ratio_2=10000; // éš¨ä¾¿ä¸€å€‹æ¯” 1.43 å¤§çš„å€¼
 	} else {
 		ratio_2=magic.mnd_2.value / magic.mnd_1.value;
 	}
@@ -364,11 +364,11 @@ function mnd_difference(){	// ¬Iªk¤è»P¨üªk¤èºë¯«¤ñ¼vÅT
 		else if (ratio_2 >= 1.02)	return 0.55;
 		else return 0.64;
 }
-function normal_or_pk(){	// ¤@¯ë¥´©Ç or PK
+function normal_or_pk(){	// ä¸€èˆ¬æ‰“æ€ª or PK
 	if (magic.situation[1].checked)	return 1.2;
 	else	return 1;
 }
-function weapon_race(){		// ºØ±ÚªZ¾¹
+function weapon_race(){		// ç¨®æ—æ­¦å™¨
 		switch (magic.race_3.value){
 		case "1":
 			switch (magic.race_2.value){
@@ -505,9 +505,9 @@ function Dydron_pet(){
 //	magic.fff_pet.value = mnd_difference_pet();
 
 }
-function fundamental_damage_pet(){ // ³æ±j¶Wªk¦U¯Å«Â¤O°ò¥»­È
+function fundamental_damage_pet(){ // å–®å¼·è¶…æ³•å„ç´šå¨åŠ›åŸºæœ¬å€¼
 	switch (magic.type_pet.value){
-	case "1":	// ³æªk
+	case "1":	// å–®æ³•
 		switch (magic.level_pet.value){
 		case "1":	return  83;
 		case "2":	return 150;
@@ -525,7 +525,7 @@ function fundamental_damage_pet(){ // ³æ±j¶Wªk¦U¯Å«Â¤O°ò¥»­È
 //		case "14":	return 827;
 //		case "15":	return 889;
 		}
-	case "2":	// ±jªk
+	case "2":	// å¼·æ³•
 		switch (magic.level_pet.value){
 		case "1":	return  50;
 		case "2":	return  90;
@@ -543,7 +543,7 @@ function fundamental_damage_pet(){ // ³æ±j¶Wªk¦U¯Å«Â¤O°ò¥»­È
 //		case "14":	return 547;
 //		case "15":	return 587;
 		}
-//	case "3":	// ¶Wªk
+//	case "3":	// è¶…æ³•
 //		switch (magic.level_pet.value){
 //		case "1":	return  33;
 //		case "2":	return  59;
@@ -570,7 +570,7 @@ function mnd_ratio_pet(){
 	else if (magic.mnd_1_pet.value <= 0) return 0;
 	else return mnd_ratio_real;
 }
-function crystal_relation_pet(){	// ¤ô´¹Äİ©Ê
+function crystal_relation_pet(){	// æ°´æ™¶å±¬æ€§
 	slot=0;
 	sum_1=(magic.ground_1_pet.value*1 + magic.water_1_pet.value*1 + magic.fire_1_pet.value*1 + magic.wind_1_pet.value*1) * 10;
 	sum_2=(magic.ground_2_pet.value*1 + magic.water_2_pet.value*1 + magic.fire_2_pet.value*1 + magic.wind_2_pet.value*1) * 10;
@@ -587,22 +587,22 @@ function crystal_relation_pet(){	// ¤ô´¹Äİ©Ê
 	slot = slot_1*1 + slot_2*1 + slot_3*1 + slot_4*1 - slot_5*1 - slot_6*1 - slot_7*1 - slot_8*1 + sum_1*1 - sum_2*1;
 	return slot*0.003;
 }
-function element_relation_pet(){	// ªk³NÄİ©Ê
+function element_relation_pet(){	// æ³•è¡“å±¬æ€§
 	section=0;
 	switch (magic.element_pet.value){
-	case "1": // ¦a
+	case "1": // åœ°
 		section = section + magic.water_2_pet.value;
 		section = section - magic.wind_2_pet.value;
 		break;
-	case "2": // ¤ô
+	case "2": // æ°´
 		section = section + magic.fire_2_pet.value;
 		section = section - magic.ground_2_pet.value;
 		break;
-	case "3": // ¤õ
+	case "3": // ç«
 		section = section + magic.wind_2_pet.value;
 		section = section - magic.water_2_pet.value;
 		break;
-	case "4": // ­·
+	case "4": // é¢¨
 		section = section + magic.ground_2_pet.value;
 		section = section - magic.fire_2_pet.value;
 		break;
@@ -610,7 +610,7 @@ function element_relation_pet(){	// ªk³NÄİ©Ê
 	section = section + 10 - ( magic.ground_2_pet.value*1 + magic.water_2_pet.value*1 + magic.fire_2_pet.value*1 + magic.wind_2_pet.value*1 );
 	return section*0.035;
 }
-function race_relation_pet(){	// ºØ±Ú¬Û«g´`Àô
+function race_relation_pet(){	// ç¨®æ—ç›¸å‰‹å¾ªç’°
 		switch (magic.race_1_pet.value){
 		case "1":
 			switch (magic.race_2_pet.value){
@@ -716,20 +716,20 @@ function race_relation_pet(){	// ºØ±Ú¬Û«g´`Àô
 			}
 		}
 }
-function mnd_difference_pet(){	// ¬Iªk¤è»P¨üªk¤èºë¯«¤ñ¼vÅT
+function mnd_difference_pet(){	// æ–½æ³•æ–¹èˆ‡å—æ³•æ–¹ç²¾ç¥æ¯”å½±éŸ¿
 //	ratio_1=magic.mnd_1_pet.value / magic.mnd_2_pet.value;
 //	ratio_2=magic.mnd_2_pet.value / magic.mnd_1_pet.value;
 	if (magic.mnd_1_pet.value <= 0){
 		ratio_1=0;
 	} else if (magic.mnd_2_pet.value <= 0) {
-		ratio_1=10000; // ÀH«K¤@­Ó¤ñ 1.2 ¤jªº­È
+		ratio_1=10000; // éš¨ä¾¿ä¸€å€‹æ¯” 1.2 å¤§çš„å€¼
 	} else {
 		ratio_1=magic.mnd_1_pet.value / magic.mnd_2_pet.value;
 	}
 	if (magic.mnd_2_pet.value <= 0){
 		ratio_2=0;
 	} else if (magic.mnd_1_pet.value <= 0){
-		ratio_2=10000; // ÀH«K¤@­Ó¤ñ 1.43 ¤jªº­È
+		ratio_2=10000; // éš¨ä¾¿ä¸€å€‹æ¯” 1.43 å¤§çš„å€¼
 	} else {
 		ratio_2=magic.mnd_2_pet.value / magic.mnd_1_pet.value;
 	}
@@ -747,89 +747,89 @@ function mnd_difference_pet(){	// ¬Iªk¤è»P¨üªk¤èºë¯«¤ñ¼vÅT
 <table cellspacing=1 border=2>
 <tbody>
 <tr><td colspan=2><center><font color=red><b>
-ºô­¶¼g¦¨ªÌ : RayLin / Dydron, °Ñ¦Ò¸ê®Æ : ¤Ú«¢ºëµØ°Ï gradyfx ¤Î Wraith ªº¤å³¹<br>
-Lv11~Lv15 ªk³N°òÂ¦¶Ë®`®Ú¾Ú<a href=http://forum.gamer.com.tw/C.php?bsn=02577&snA=156785&tnum=1 target=_blank> zyxvaaaa(~¤p¤ë¹a~) ¤å³¹</a><br>
+ç¶²é å¯«æˆè€… : RayLin / Dydron, åƒè€ƒè³‡æ–™ : å·´å“ˆç²¾è¯å€ gradyfx åŠ Wraith çš„æ–‡ç« <br>
+Lv11~Lv15 æ³•è¡“åŸºç¤å‚·å®³æ ¹æ“š<a href=http://forum.gamer.com.tw/C.php?bsn=02577&snA=156785&tnum=1 target=_blank> zyxvaaaa(~å°æœˆéˆ´~) æ–‡ç« </a><br>
 </b></font></center></td></tr>
 <tr><td colspan=2><center>
-¤Hª«Å]ªk¶Ë®`³¡¥÷
+äººç‰©é­”æ³•å‚·å®³éƒ¨ä»½
 </font></center></td></tr>
 <tr><td rowspan=2>
-¬Iªk¤è<br>
-1. ªk³N½d³ò <select name=type>
-	<option value=1>³æ	<option value=2>±j	<option value=3 selected>¶W
+æ–½æ³•æ–¹<br>
+1. æ³•è¡“ç¯„åœ <select name=type>
+	<option value=1>å–®	<option value=2>å¼·	<option value=3 selected>è¶…
 </select><br>
-2. ªk³Nµ¥¯Å <select name=level>
+2. æ³•è¡“ç­‰ç´š <select name=level>
 	<option value=1>1	<option value=2>2	<option value=3>3	<option value=4>4
 	<option value=5>5	<option value=6>6	<option value=7>7	<option value=8>8
 	<option value=9>9	<option value=10>10	<option value=11>11	<option value=12>12
 	<option value=13>13	<option value=14>14	<option value=15 selected>15
 </select><br>
-3. ªk³NÄİ©Ê <select name=element>
-	<option value=1>¦a	<option value=2 selected>¤ô	<option value=3>¤õ	<option value=4>­·
+3. æ³•è¡“å±¬æ€§ <select name=element>
+	<option value=1>åœ°	<option value=2 selected>æ°´	<option value=3>ç«	<option value=4>é¢¨
 </select><br>
-4. ¤ô´¹ 
-¦a <select name=ground_1>
+4. æ°´æ™¶ 
+åœ° <select name=ground_1>
 	<option value=0>0	<option value=1>1	<option value=2>2	<option value=3>3
 	<option value=4>4	<option value=5>5	<option value=6>6	<option value=7>7
 	<option value=8>8	<option value=9>9	<option value=10>10
 </select>
-¤ô <select name=water_1>
+æ°´ <select name=water_1>
 	<option value=0>0	<option value=1>1	<option value=2>2	<option value=3>3
 	<option value=4>4	<option value=5>5	<option value=6>6	<option value=7>7
 	<option value=8>8	<option value=9>9	<option value=10 selected>10
 </select>
-¤õ <select name=fire_1>
+ç« <select name=fire_1>
 	<option value=0>0	<option value=1>1	<option value=2>2	<option value=3>3
 	<option value=4>4	<option value=5>5	<option value=6>6	<option value=7>7
 	<option value=8>8	<option value=9>9	<option value=10>10
 </select>
-­· <select name=wind_1>
+é¢¨ <select name=wind_1>
 	<option value=0>0	<option value=1>1	<option value=2>2	<option value=3>3
 	<option value=4>4	<option value=5>5	<option value=6>6	<option value=7>7
 	<option value=8>8	<option value=9>9	<option value=10>10
 </select><br>
-5. ºë¯« <input name=mnd_1 value=403 size=3><br>
-6. ªZ¾¹ºØ±Ú <select name=race_3>
-	<option value=1>³¥Ã~	<option value=2>¤£¦º	<option value=3>­¸¦æ	<option value=4>©øÂÎ
-	<option value=5>´Óª«	<option value=6>¯S®í	<option value=7>ª÷Äİ	<option value=8>Às
-	<option value=9 selected>¤H§Î	<option value=10>¨¸Å] <option value=11>¯«±Ú <option value=12>µL
+5. ç²¾ç¥ <input name=mnd_1 value=403 size=3><br>
+6. æ­¦å™¨ç¨®æ— <select name=race_3>
+	<option value=1>é‡ç¸	<option value=2>ä¸æ­»	<option value=3>é£›è¡Œ	<option value=4>æ˜†èŸ²
+	<option value=5>æ¤ç‰©	<option value=6>ç‰¹æ®Š	<option value=7>é‡‘å±¬	<option value=8>é¾
+	<option value=9 selected>äººå½¢	<option value=10>é‚ªé­” <option value=11>ç¥æ— <option value=12>ç„¡
 </select><br>
-7. Å]§ğ <input name=adm value=320 size=3><br>
+7. é­”æ”» <input name=adm value=320 size=3><br>
 </td><td>
-¨üªk¤è<br>
-1. ¤ô´¹ 
-¦a <select name=ground_2>
+å—æ³•æ–¹<br>
+1. æ°´æ™¶ 
+åœ° <select name=ground_2>
 	<option value=0>0	<option value=1>1	<option value=2>2	<option value=3>3
 	<option value=4>4	<option value=5>5	<option value=6>6	<option value=7>7
 	<option value=8>8	<option value=9>9	<option value=10>10
 </select>
-¤ô <select name=water_2>
+æ°´ <select name=water_2>
 	<option value=0>0	<option value=1>1	<option value=2>2	<option value=3>3
 	<option value=4>4	<option value=5>5	<option value=6>6	<option value=7>7
 	<option value=8>8	<option value=9>9	<option value=10>10
 </select>
-¤õ <select name=fire_2>
+ç« <select name=fire_2>
 	<option value=0>0	<option value=1>1	<option value=2>2	<option value=3>3
 	<option value=4>4	<option value=5>5	<option value=6>6	<option value=7>7
 	<option value=8>8	<option value=9>9	<option value=10 selected>10
 </select>
-­· <select name=wind_2>
+é¢¨ <select name=wind_2>
 	<option value=0>0	<option value=1>1	<option value=2>2	<option value=3>3
 	<option value=4>4	<option value=5>5	<option value=6>6	<option value=7>7
 	<option value=8>8	<option value=9>9	<option value=10>10
 </select><br>
-2. ºØ±Ú <select name=race_2>
-	<option value=1>³¥Ã~	<option value=2>¤£¦º	<option value=3>­¸¦æ	<option value=4>©øÂÎ
-	<option value=5>´Óª«	<option value=6>¯S®í	<option value=7>ª÷Äİ	<option value=8>Às
-	<option value=9>¤H§Î	<option value=10>¨¸Å] <option value=11>¯«±Ú
+2. ç¨®æ— <select name=race_2>
+	<option value=1>é‡ç¸	<option value=2>ä¸æ­»	<option value=3>é£›è¡Œ	<option value=4>æ˜†èŸ²
+	<option value=5>æ¤ç‰©	<option value=6>ç‰¹æ®Š	<option value=7>é‡‘å±¬	<option value=8>é¾
+	<option value=9>äººå½¢	<option value=10>é‚ªé­” <option value=11>ç¥æ—
 </select><br>
-3. ºë¯« <input name=mnd_2 value=100 size=3><br>
+3. ç²¾ç¥ <input name=mnd_2 value=100 size=3><br>
 </td></tr><tr><td>
-<input type=radio name=situation value=pk>PK¤¤ <br>
-<input type=radio name=situation value=normal checked>¤@¯ë¥´©Ç <br>
+<input type=radio name=situation value=pk>PKä¸­ <br>
+<input type=radio name=situation value=normal checked>ä¸€èˆ¬æ‰“æ€ª <br>
 </td></tr><tr><td colspan=2>
 <center>
-<input onclick=Dydron() type=button value=­pºâ¤Hª«Å]ªk¶Ë®` name=calculate>
+<input onclick=Dydron() type=button value=è¨ˆç®—äººç‰©é­”æ³•å‚·å®³ name=calculate>
 </center>
 </td></tr><tr><td colspan=2>
 <center>
@@ -841,81 +841,81 @@ Lv11~Lv15 ªk³N°òÂ¦¶Ë®`®Ú¾Ú<a href=http://forum.gamer.com.tw/C.php?bsn=02577&snA=
 </center>
 </td></tr>
 <tr><td colspan=2><center>
-Ãdª«Å]ªk¶Ë®`³¡¥÷
+å¯µç‰©é­”æ³•å‚·å®³éƒ¨ä»½
 </center></td></tr>
 <tr><td rowspan=2>
-¬Iªk¤è<br>
-1. ªk³N½d³ò <select name=type_pet>
-	<option value=1>³æ	<option value=2 selected>±j
+æ–½æ³•æ–¹<br>
+1. æ³•è¡“ç¯„åœ <select name=type_pet>
+	<option value=1>å–®	<option value=2 selected>å¼·
 </select><br>
-2. ªk³Nµ¥¯Å <select name=level_pet>
+2. æ³•è¡“ç­‰ç´š <select name=level_pet>
 	<option value=1>1	<option value=2>2	<option value=3>3	<option value=4>4
 	<option value=5>5	<option value=6>6	<option value=7>7	<option value=8>8
 	<option value=9>9	<option value=10 selected>10
 </select><br>
-3. ªk³NÄİ©Ê <select name=element_pet>
-	<option value=1>¦a	<option value=2 selected>¤ô	<option value=3>¤õ	<option value=4>­·
+3. æ³•è¡“å±¬æ€§ <select name=element_pet>
+	<option value=1>åœ°	<option value=2 selected>æ°´	<option value=3>ç«	<option value=4>é¢¨
 </select><br>
-4. ¤ô´¹ 
-¦a <select name=ground_1_pet>
+4. æ°´æ™¶ 
+åœ° <select name=ground_1_pet>
 	<option value=0>0	<option value=1>1	<option value=2>2	<option value=3>3
 	<option value=4>4	<option value=5>5	<option value=6>6	<option value=7>7
 	<option value=8>8	<option value=9>9	<option value=10>10
 </select>
-¤ô <select name=water_1_pet>
+æ°´ <select name=water_1_pet>
 	<option value=0>0	<option value=1>1	<option value=2>2	<option value=3>3
 	<option value=4>4	<option value=5>5	<option value=6>6	<option value=7>7
 	<option value=8>8	<option value=9>9	<option value=10 selected>10
 </select>
-¤õ <select name=fire_1_pet>
+ç« <select name=fire_1_pet>
 	<option value=0>0	<option value=1>1	<option value=2>2	<option value=3>3
 	<option value=4>4	<option value=5>5	<option value=6>6	<option value=7>7
 	<option value=8>8	<option value=9>9	<option value=10>10
 </select>
-­· <select name=wind_1_pet>
+é¢¨ <select name=wind_1_pet>
 	<option value=0>0	<option value=1>1	<option value=2>2	<option value=3>3
 	<option value=4>4	<option value=5>5	<option value=6>6	<option value=7>7
 	<option value=8>8	<option value=9>9	<option value=10>10
 </select><br>
-5. ºØ±Ú <select name=race_1_pet>
-	<option value=1>³¥Ã~	<option value=2>¤£¦º	<option value=3>­¸¦æ	<option value=4>©øÂÎ
-	<option value=5>´Óª«	<option value=6>¯S®í	<option value=7>ª÷Äİ	<option value=8>Às
-	<option value=9 selected>¤H§Î	<option value=10>¨¸Å] <option value=11>¯«±Ú
+5. ç¨®æ— <select name=race_1_pet>
+	<option value=1>é‡ç¸	<option value=2>ä¸æ­»	<option value=3>é£›è¡Œ	<option value=4>æ˜†èŸ²
+	<option value=5>æ¤ç‰©	<option value=6>ç‰¹æ®Š	<option value=7>é‡‘å±¬	<option value=8>é¾
+	<option value=9 selected>äººå½¢	<option value=10>é‚ªé­” <option value=11>ç¥æ—
 </select><br>
-6. ºë¯« <input name=mnd_1_pet value=303 size=3><br>
+6. ç²¾ç¥ <input name=mnd_1_pet value=303 size=3><br>
 </td><td>
-¨üªk¤è<br>
-1. ¤ô´¹ 
-¦a <select name=ground_2_pet>
+å—æ³•æ–¹<br>
+1. æ°´æ™¶ 
+åœ° <select name=ground_2_pet>
 	<option value=0>0	<option value=1>1	<option value=2>2	<option value=3>3
 	<option value=4>4	<option value=5>5	<option value=6>6	<option value=7>7
 	<option value=8>8	<option value=9>9	<option value=10>10
 </select>
-¤ô <select name=water_2_pet>
+æ°´ <select name=water_2_pet>
 	<option value=0>0	<option value=1>1	<option value=2>2	<option value=3>3
 	<option value=4>4	<option value=5>5	<option value=6>6	<option value=7>7
 	<option value=8>8	<option value=9>9	<option value=10>10
 </select>
-¤õ <select name=fire_2_pet>
+ç« <select name=fire_2_pet>
 	<option value=0>0	<option value=1>1	<option value=2>2	<option value=3>3
 	<option value=4>4	<option value=5>5	<option value=6>6	<option value=7>7
 	<option value=8>8	<option value=9>9	<option value=10 selected>10
 </select>
-­· <select name=wind_2_pet>
+é¢¨ <select name=wind_2_pet>
 	<option value=0>0	<option value=1>1	<option value=2>2	<option value=3>3
 	<option value=4>4	<option value=5>5	<option value=6>6	<option value=7>7
 	<option value=8>8	<option value=9>9	<option value=10>10
 </select><br>
-2. ºØ±Ú <select name=race_2_pet>
-	<option value=1>³¥Ã~	<option value=2>¤£¦º	<option value=3>­¸¦æ	<option value=4>©øÂÎ
-	<option value=5>´Óª«	<option value=6>¯S®í	<option value=7>ª÷Äİ	<option value=8>Às
-	<option value=9>¤H§Î	<option value=10>¨¸Å] <option value=11>¯«±Ú
+2. ç¨®æ— <select name=race_2_pet>
+	<option value=1>é‡ç¸	<option value=2>ä¸æ­»	<option value=3>é£›è¡Œ	<option value=4>æ˜†èŸ²
+	<option value=5>æ¤ç‰©	<option value=6>ç‰¹æ®Š	<option value=7>é‡‘å±¬	<option value=8>é¾
+	<option value=9>äººå½¢	<option value=10>é‚ªé­” <option value=11>ç¥æ—
 </select><br>
-3. ºë¯« <input name=mnd_2_pet value=100 size=3><br>
+3. ç²¾ç¥ <input name=mnd_2_pet value=100 size=3><br>
 </td></tr><tr><td>
 </td></tr><tr><td colspan=2>
 <center>
-<input onclick=Dydron_pet() type=button value=­pºâÃdª«Å]ªk¶Ë®` name=calculate_pet>
+<input onclick=Dydron_pet() type=button value=è¨ˆç®—å¯µç‰©é­”æ³•å‚·å®³ name=calculate_pet>
 </center>
 </td></tr><tr><td colspan=2>
 <center>
@@ -927,7 +927,7 @@ Lv11~Lv15 ªk³N°òÂ¦¶Ë®`®Ú¾Ú<a href=http://forum.gamer.com.tw/C.php?bsn=02577&snA=
 </center>
 </td></tr>
 <tr><td colspan=2><center>
-©|¤í §l¦åÅ]ªk, RSS Å]¨¾, ºØ±Ú¨¾¨ã
+å°šæ¬  å¸è¡€é­”æ³•, RSS é­”é˜², ç¨®æ—é˜²å…·
 </center></td></tr>
 </tbody>
 </table>
